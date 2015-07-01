@@ -1,0 +1,31 @@
+.container {
+    margin-top:5pt;
+
+    .categories {
+        .col {
+            padding:2pt;
+            
+            .category-wrapper {
+                padding:2pt;
+                background:color("grey", "darken-2");
+                @include border-radius-category(2px);
+                @extend .hoverable;
+            }
+        }
+        .cat-title {
+            //background:color("grey", "darken-2");
+            text-align:center;
+            color:#FFF;
+        }
+        .img-container {
+            //border:solid 3pt color("grey", "darken-2");
+            
+            .img-wrapper {
+                height:40pt;
+                margin:0px auto;
+                background:url("../images/NoImageIcon.jpg") 0pt;
+                background-size:100%;
+            }
+        }
+    }
+}
