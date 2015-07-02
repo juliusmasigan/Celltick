@@ -10,14 +10,16 @@
     <body>
 
         <nav>
-            <div class="nav-wrapper light-blue darken-2"><a href="#" class="brand-logo center">WELCOME!</a></div>
+            <div class="nav-wrapper"><a href="#" class="brand-logo center">WELCOME!</a></div>
         </nav>
 
         <div class="container">
+
+            <!-- /// CATEGORIES NAV /// -->
             <div class="row categories">
                 <div class="col s4">
                     <div class="category-wrapper">
-                        <div class="cat-title">Full Track Music</div>
+                        <div class="cat-title">FULL TRACK MUSIC</div>
                         <div class="img-container">
                             <div class="img-wrapper"></div>
                         </div>
@@ -25,7 +27,7 @@
                 </div>
                 <div class="col s4">
                     <div class="category-wrapper">
-                        <div class="cat-title">Sticker</div>
+                        <div class="cat-title">STICKER</div>
                         <div class="img-container">
                             <div class="img-wrapper"></div>
                         </div>
@@ -33,7 +35,7 @@
                 </div>
                 <div class="col s4">
                     <div class="category-wrapper">
-                        <div class="cat-title">Truetone</div>
+                        <div class="cat-title">TRUETONE</div>
                         <div class="img-container">
                             <div class="img-wrapper"></div>
                         </div>
@@ -41,7 +43,7 @@
                 </div>
                 <div class="col s4">
                     <div class="category-wrapper">
-                        <div class="cat-title">Games</div>
+                        <div class="cat-title">GAMES</div>
                         <div class="img-container">
                             <div class="img-wrapper"></div>
                         </div>
@@ -49,7 +51,7 @@
                 </div>
                 <div class="col s4">
                     <div class="category-wrapper">
-                        <div class="cat-title">Ebooks</div>
+                        <div class="cat-title">EBOOKS</div>
                         <div class="img-container">
                             <div class="img-wrapper"></div>
                         </div>
@@ -57,13 +59,21 @@
                 </div>
                 <div class="col s4">
                     <div class="category-wrapper">
-                        <div class="cat-title">Settings</div>
+                        <div class="cat-title">SETTINGS</div>
                         <div class="img-container">
                             <div class="img-wrapper"></div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- /// CATEGORIES NAV /// -->
+
+
+            <div class="row">
+                <div ng-view></div>
+            </div>
+
+            
         </div>
 
         <!--Import jQuery before materialize.js-->
