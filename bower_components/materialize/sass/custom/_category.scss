@@ -1,6 +1,4 @@
 .container {
-    margin-top:5pt;
-
     .categories {
         .col {
             padding:2pt;
@@ -11,6 +9,7 @@
                 transition:box-shadow .30s ease, background .30s ease;
                 @include border-radius-category(2px);
                 @extend .hoverable; 
+                @extend .z-depth-2;
                 &:hover {
                     background:color("light-blue", "lighten-1");
                 };
@@ -27,7 +26,7 @@
             .img-wrapper {
                 height:25pt;
                 margin:0px auto;
-                //background:url("../images/NoImageIcon.jpg") 0pt; //Icon as the background.
+                background:url("../images/NoImageIcon.jpg") 0pt; //Icon as the background.
                 background-size:100%;
             }
         }

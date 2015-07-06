@@ -1,0 +1,36 @@
+.card {
+    @extend .card;
+
+    .card-content {
+        padding: 5px;
+        font-size: .65rem;
+    }
+
+    &.extra-small {
+        position: relative;
+
+        .card-image {
+          overflow: hidden;
+        }
+        .card-content {
+          overflow: hidden;
+        }
+        .card-action {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+    }
+
+    &.extra-small {
+        height: 150px;
+
+        .card-image {
+          height: 100px;
+        }
+        .card-content {
+          height: 50px;
+        }
+    }
+}

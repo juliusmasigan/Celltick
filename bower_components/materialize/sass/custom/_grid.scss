@@ -1,0 +1,10 @@
+.row {
+    @extend .row;
+
+    &.cards {
+
+        .col {
+            padding:0 $gutter-width/4;
+        }
+    }
+}
