@@ -2,7 +2,7 @@ var ftmController = angular.module('ftmController', []);
 
 ftmController.controller('ftmListController', ['$scope', function($scope) {
     var ftmList = [];
-    for(i=1; i<=9; i++) {
+    for(i=1; i<=20; i++) {
         ftmList.push({
             'icon'  : '/images/sample-1.jpg',
             'title' : 'Sample'+i,
@@ -12,4 +12,7 @@ ftmController.controller('ftmListController', ['$scope', function($scope) {
     }
 
     $scope.ftmList = ftmList;
+    $scope.click = function(clickEvent) {
+        
+    };
 }]);
