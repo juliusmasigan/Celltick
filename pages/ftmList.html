@@ -1,12 +1,14 @@
-<div class="col s4" ng-repeat="ftm in ftmList">
-    <div class="card extra-small" ng-click="click($event)">
-        <div class="card-image">
-            <img ng-src="{{ ftm.icon }}" />
-        </div>
-        <div class="card-content">
-            <div>Title: {{ ftm.title }}</div>
-            <div>Artist: {{ ftm.artist }}</div>
-            <div>Price: {{ ftm.price }}</div>
+<div class="row cards">
+    <div class="col s4" ng-repeat="ftm in ftmList">
+        <div class="card extra-small" ng-click="click($event, ftm.id)">
+            <div class="card-image">
+                <img ng-src="{{ ftm.icon }}" />
+            </div>
+            <div class="card-content">
+                <div>Title: {{ ftm.title }}</div>
+                <div>Artist: {{ ftm.artist }}</div>
+                <div>Price: {{ ftm.price }}</div>
+            </div>
         </div>
     </div>
 </div>

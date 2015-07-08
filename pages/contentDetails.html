@@ -1,0 +1,25 @@
+<div class="row content-detail">
+    <div class="col s12">
+        <div class="header">{{ headerTitle }}</div>
+    </div>
+    <div class="col s12 hr"></div>
+    <div class="col s12 detail">
+        <div class="row">
+            <div class="col s4">
+                <img class="responsive-img" ng-src="{{ detail.thumb }}" />
+            </div>
+            <div class="col s8">
+                <div class="row">
+                    <div class="col s12">Title: {{ detail.title }}</div>
+                    <div class="col s12">Artist: {{ detail.artist }}</div>
+                    <div class="col s12">Price: {{ detail.price }}</div>
+                </div>
+            </div>
+            <div class="col s12">Description: <br />{{ detail.description }}</div>
+        </div>
+    </div>
+    <div class="col s12 confirm-label center-align">CONFIRM PURCHASE AND DOWNLOAD</div>
+    <div class="col s12 action-button">
+        <a class="waves-effect waves-light btn"><i class="material-icons">send</i></a>
+    </div>
+</div>
