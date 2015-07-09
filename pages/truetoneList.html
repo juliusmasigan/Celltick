@@ -1,0 +1,14 @@
+<div class="row cards">
+    <div class="col s4" ng-repeat="truetone in truetoneList">
+        <div class="card extra-small" ng-click="click($event, truetone.id)">
+            <div class="card-image">
+                <img ng-src="{{ truetone.icon }}" />
+            </div>
+            <div class="card-content">
+                <div>Title: {{ truetone.title }}</div>
+                <div>Artist: {{ truetone.artist }}</div>
+                <div>Price: {{ truetone.price }}</div>
+            </div>
+        </div>
+    </div>
+</div>

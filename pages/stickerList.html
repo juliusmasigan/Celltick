@@ -1,0 +1,13 @@
+<div class="row cards">
+    <div class="col s4" ng-repeat="sticker in stickerList">
+        <div class="card extra-small" ng-click="click($event, sticker.id)">
+            <div class="card-image">
+                <img ng-src="{{ sticker.icon }}" />
+            </div>
+            <div class="card-content">
+                <div>Title: {{ sticker.title }}</div>
+                <div>Price: {{ sticker.price }}</div>
+            </div>
+        </div>
+    </div>
+</div>
