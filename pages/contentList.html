@@ -1,0 +1,14 @@
+<div class="row cards">
+    <div class="col s4" ng-repeat="item in itemList">
+        <div class="card extra-small" ng-click="view($event, item)">
+            <div class="card-image">
+                <img ng-src="{{ item.icon }}" />
+            </div>
+            <div class="card-content">
+                <div>Title: {{ item.title }}</div>
+                <div>Artist: {{ item.artist }}</div>
+                <div>Price: {{ item.price }}</div>
+            </div>
+        </div>
+    </div>
+</div>

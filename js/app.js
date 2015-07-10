@@ -1,30 +1,19 @@
 var celltickApp = angular.module('celltickApp', [
     'ngRoute', 
+    'categoriesController',
     'ftmController',
-    'stickerController',
-    'truetoneController',
+    'categoryService'
 ]);
 
 celltickApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl : 'pages/home.html'
+        templateUrl : 'pages/catCards.html',
+        controller  : 'categoryCardsController'
     }).when('/ftm', {
-        templateUrl : 'pages/ftmList.html',
+        templateUrl : 'pages/contentList.html',
         controller  : 'ftmListController'
     }).when('/ftm/:contentId', {
-        templateUrl : 'pages/contentDetails.html',
+        templateUrl : 'pages/contentDetail.html',
         controller  : 'ftmDetailController'
-    }).when('/sticker', {
-        templateUrl : 'pages/stickerList.html',
-        controller  : 'stickerListController'
-    }).when('/sticker/:contentId', {
-        templateUrl : 'pages/contentDetails.html',
-        controller  : 'stickerDetailController'
-    }).when('/truetone', {
-        templateUrl : 'pages/truetoneList.html',
-        controller  : 'truetoneListController'
-    }).when('/truetone/:contentId', {
-        templateUrl : 'pages/contentDetails.html',
-        controller  : 'truetoneDetailController'
     });
 }]);
