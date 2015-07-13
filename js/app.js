@@ -2,7 +2,8 @@ var celltickApp = angular.module('celltickApp', [
     'ngRoute', 
     'categoriesController',
     'ftmController',
-    'categoryService'
+    'categoryService',
+    'ftmService'
 ]);
 
 celltickApp.config(['$routeProvider', function($routeProvider) {

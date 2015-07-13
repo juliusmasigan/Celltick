@@ -1,0 +1,9 @@
+[
+    {"id":1, "icon":"/images/sample-1.jpg", "title":"FTM 1", "artist":"Artist 1", "price":"P40.00"},
+    {"id":2, "icon":"/images/sample-1.jpg", "title":"FTM 2", "artist":"Artist 2", "price":"P40.00"},
+    {"id":3, "icon":"/images/sample-1.jpg", "title":"FTM 3", "artist":"Artist 3", "price":"P40.00"},
+    {"id":4, "icon":"/images/sample-1.jpg", "title":"FTM 4", "artist":"Artist 4", "price":"P40.00"},
+    {"id":5, "icon":"/images/sample-1.jpg", "title":"FTM 5", "artist":"Artist 5", "price":"P40.00"},
+    {"id":6, "icon":"/images/sample-1.jpg", "title":"FTM 6", "artist":"Artist 6", "price":"P40.00"},
+    {"id":7, "icon":"/images/sample-1.jpg", "title":"FTM 7", "artist":"Artist 7", "price":"P40.00"}
+]
