@@ -1,0 +1,9 @@
+[
+    {"id":1, "icon":"/images/sample-1.jpg", "title":"Sticker 1", "price":"P2.00"},
+    {"id":2, "icon":"/images/sample-1.jpg", "title":"Sticker 2", "price":"P2.00"},
+    {"id":3, "icon":"/images/sample-1.jpg", "title":"Sticker 3", "price":"P2.00"},
+    {"id":4, "icon":"/images/sample-1.jpg", "title":"Sticker 4", "price":"P2.00"},
+    {"id":5, "icon":"/images/sample-1.jpg", "title":"Sticker 5", "price":"P2.00"},
+    {"id":6, "icon":"/images/sample-1.jpg", "title":"Sticker 6", "price":"P2.00"},
+    {"id":7, "icon":"/images/sample-1.jpg", "title":"Sticker 7", "price":"P2.00"}
+]

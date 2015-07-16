@@ -1,10 +1,21 @@
 .row {
     @extend .row;
 
-    &.cards {
+    &.module {
 
-        .col {
-            padding:0 $gutter-width/4;
+        >.col {
+            padding:0 $gutter-width/6;
         }
+    }
+
+    &.list {
+
+        >.col {
+            padding:0 $gutter-width/6;
+        }
+    }
+
+    &.list-title {
+        margin-bottom:0;
     }
 }

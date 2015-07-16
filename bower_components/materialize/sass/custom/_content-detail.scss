@@ -25,6 +25,10 @@
     }
 
     .action-button {
-        padding:10px 0;
+        padding:0;
+
+        .btn {
+            background:color("light-blue", "darken-1");
+        }
     }
 }

@@ -1,0 +1,9 @@
+[
+    {"id":1, "icon":"/images/sample-1.jpg", "title":"Ebook 1", "price":"P30.00"},
+    {"id":2, "icon":"/images/sample-1.jpg", "title":"Ebook 2", "price":"P30.00"},
+    {"id":3, "icon":"/images/sample-1.jpg", "title":"Ebook 3", "price":"P30.00"},
+    {"id":4, "icon":"/images/sample-1.jpg", "title":"Ebook 4", "price":"P30.00"},
+    {"id":5, "icon":"/images/sample-1.jpg", "title":"Ebook 5", "price":"P30.00"},
+    {"id":6, "icon":"/images/sample-1.jpg", "title":"Ebook 6", "price":"P30.00"},
+    {"id":7, "icon":"/images/sample-1.jpg", "title":"Ebook 7", "price":"P30.00"}
+]

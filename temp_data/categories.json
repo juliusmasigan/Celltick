@@ -1,7 +1,7 @@
 [
-{"id":1, "title":"Full Track Music", "thumbPath":"/images/sample-1.jpg", "url":"ftm"},
-{"id":1, "title":"Truetone", "thumbPath":"/images/sample-1.jpg", "url":"truetone"},
-{"id":1, "title":"Sticker", "thumbPath":"/images/sample-1.jpg", "url":"sticker"},
-{"id":1, "title":"Games", "thumbPath":"/images/sample-1.jpg", "url":"games"},
-{"id":1, "title":"Ebooks", "thumbPath":"/images/sample-1.jpg", "url":"ebooks"}
+{"id":1, "title":"Full Track Music", "thumbPath":"/images/FTM.png", "url":"ftm"},
+{"id":1, "title":"Truetone", "thumbPath":"/images/true tone.png", "url":"truetone"},
+{"id":1, "title":"Sticker", "thumbPath":"/images/sticker.png", "url":"sticker"},
+{"id":1, "title":"Games", "thumbPath":"/images/game.png", "url":"game"},
+{"id":1, "title":"Ebooks", "thumbPath":"/images/book.png", "url":"ebook"}
 ]

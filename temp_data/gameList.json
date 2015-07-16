@@ -1,0 +1,9 @@
+[
+    {"id":1, "icon":"/images/sample-1.jpg", "title":"Games 1", "price":"P20.00"},
+    {"id":2, "icon":"/images/sample-1.jpg", "title":"Games 2", "price":"P20.00"},
+    {"id":3, "icon":"/images/sample-1.jpg", "title":"Games 3", "price":"P20.00"},
+    {"id":4, "icon":"/images/sample-1.jpg", "title":"Games 4", "price":"P20.00"},
+    {"id":5, "icon":"/images/sample-1.jpg", "title":"Games 5", "price":"P20.00"},
+    {"id":6, "icon":"/images/sample-1.jpg", "title":"Games 6", "price":"P20.00"},
+    {"id":7, "icon":"/images/sample-1.jpg", "title":"Games 7", "price":"P20.00"}
+]
