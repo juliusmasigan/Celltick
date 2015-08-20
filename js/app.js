@@ -1,5 +1,6 @@
 var celltickApp = angular.module('celltickApp', [
     'ngRoute', 
+    'verificationController',
     'categoriesController',
     'ftmController',
     'truetoneController',
@@ -50,5 +51,10 @@ celltickApp.config(['$routeProvider', function($routeProvider) {
     }).when('/ebook/:contentId', {
         templateUrl : 'pages/contentDetail.html',
         controller  : 'ebookDetailController'
+    }).when('/verify', {
+        templateUrl : 'pages/verification-modal.html',
+        controller  : 'verify'
     });
 }]);
+
+celltickApp.apiBaseUrl = "http://localhost:8000"
