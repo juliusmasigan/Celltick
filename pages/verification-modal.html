@@ -6,12 +6,10 @@
                 <input type="text" id="msisdn" ng-model="msisdn">
                 <label for="msisdn">Mobile Number</label>
             </div>
-            <div class="col s12">
-                <button class="btn" ng-click="submit_mobile($event)">Submit</button>
-            </div>
         </div>
     </div>
     <div class="modal-footer">
+        <button class="btn" ng-click="submit_mobile($event)">Submit</button>
     </div>
 </div>
 
@@ -20,11 +18,12 @@
         <div class="row">
             <div class="col s12"><h5>Please enter the verification code</h5></div>
             <div class="input-field col s12">
-                <input type="text" id="verification_code">
+                <input type="text" id="verification_code" ng-model="verif_code">
                 <label for="verification_code">Verification Code</label>
             </div>
         </div>
     </div>
     <div class="modal-footer">
+        <button class="btn" ng-click="submit_verification($event)">Submit</button>
     </div>
 </div>
