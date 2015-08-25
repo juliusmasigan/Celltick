@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+//import materialize resources
+@import "../bower_components/materialize/sass/materialize";
+
+@import "celltick/variables";
+@import "celltick/global";
+@import "celltick/category";
+@import "celltick/nav";
+@import "celltick/card";
+@import "celltick/grid";
+@import "celltick/content-detail";
+@import "celltick/headroom";
+@import "celltick/modal";
