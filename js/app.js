@@ -1,26 +1,27 @@
 var celltickApp = angular.module('celltickApp', [
     'ngRoute', 
-    'verificationController',
-    'categoriesController',
+    'homeController',
     'ftmController',
     'truetoneController',
     'stickerController',
+    'verificationController',
     'gameController',
     'ebookController',
-    'categoryService',
+    'groupsetService',
     'ftmService',
     'truetoneService',
     'stickerService',
     'gameService',
     'ebookService',
     'headroom',
-    'switchview'
+    'switchview',
+    'ctdownload'
 ]);
 
 celltickApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl : 'pages/catCards.html',
-        controller  : 'categoryCardsController'
+        templateUrl : 'pages/home.html',
+        controller  : 'homeCardsController'
     }).when('/ftm', {
         templateUrl : 'pages/contentList.html',
         controller  : 'ftmListController'
@@ -57,4 +58,13 @@ celltickApp.config(['$routeProvider', function($routeProvider) {
     });
 }]);
 
-celltickApp.apiBaseUrl = "http://localhost:8000"
+celltickApp.config(function($httpProvider) {
+    $httpProvider.defaults.withCredentials = true;
+});
+
+
+celltickApp.apiBaseUrl = "http://192.168.0.43:8000"
+
+$(function() {
+    $('nav .button-collapse').sideNav();
+});
