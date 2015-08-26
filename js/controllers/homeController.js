@@ -1,7 +1,12 @@
 var homeController = angular.module('homeController', ['groupsetService']);
 
 homeController.controller('homeCardsController', ['$scope', 'Groupset', function($scope, Groupset) {
-    var home = Groupset.query({name:'home'});
+    var swiper = new Swiper('.swiper-container', {pagination:'.swiper-pagination'});
 
-    $scope.home = home;
+    Groupset.query({name:'home'}).$promise.then(
+        function(result) {
+            $scope.categories = result;
+        }, function(error) {
+        }
+    );
 }]);
