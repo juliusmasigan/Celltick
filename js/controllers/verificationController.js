@@ -1,7 +1,7 @@
 var verificationController = angular.module('verificationController', ['verificationService']);
 
 verificationController.controller('verify', ['$scope', 'Verify', function($scope, Verify) {
-    $('#mobile-modal').openModal();
+    //$('#mobile-modal').openModal();
     $scope.msisdn;
     $scope.verif_code;
 
