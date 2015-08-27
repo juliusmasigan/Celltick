@@ -8,6 +8,7 @@ var celltickApp = angular.module('celltickApp', [
     'gameController',
     'ebookController',
     'groupsetService',
+    'buyService',
     'ftmService',
     'truetoneService',
     'stickerService',
@@ -64,7 +65,7 @@ celltickApp.config(function($httpProvider) {
 });
 
 
-celltickApp.apiBaseUrl = "http://192.168.0.43:8000"
+celltickApp.apiBaseUrl = "http://localhost:8000"
 
 $(function() {
     $('nav .button-collapse').sideNav();

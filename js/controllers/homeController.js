@@ -1,10 +1,20 @@
-var homeController = angular.module('homeController', ['groupsetService']);
+var homeController = angular.module('homeController', ['groupsetService', 'buyService']);
 
-homeController.controller('homeCardsController', ['$scope', 'Groupset', function($scope, Groupset) {
+homeController.controller('homeCardsController', ['$scope', 'Groupset', 'Buy', function($scope, Groupset, Buy) {
     $scope.verification = "pages/verification-modal.html";
+    $scope.apiBaseUrl = celltickApp.apiBaseUrl;
 
     $scope.buy = function(clickEvent, content) {
-        console.log(content);
+        cid = content.id.replace(/\-/g, "");
+        Buy.get({content_id:cid}).$promise.then(
+            function(result) {
+                console.log(result);
+            }, function(error) {
+                if(error.status == 401) {
+                    $('#mobile-modal').openModal();
+                }
+            }
+        );
     };
 
     Groupset.query({name:'home'}).$promise.then(

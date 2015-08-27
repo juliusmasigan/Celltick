@@ -15,7 +15,7 @@
                         <div class="swiper-slide" ng-repeat="content in category.contents">
                             <div class="row">
                                 <div class="col s4 offset-s1">
-                                    <img ng-src="http://192.168.0.43:8000{{content.thumbnail}}" />
+                                    <img ng-src="{{apiBaseUrl + content.thumbnail}}" />
                                 </div>
                                 <div class="col s7">
                                     <span class="flow-text content-title">{{content.title}}</span>
