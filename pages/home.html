@@ -1,17 +1,30 @@
-<div class="row category" ng-repeat="category in categories">
-    <div class="col s12">
+<div ng-include="pages/verification-modal"></div>
+<div class="section category" ng-repeat="category in categories">
 
-        <div class="row">
-            <div class="col s8">{{category.title}}</div>
-            <div class="col s4"><button class="btn">SEE ALL</button></div>
+        <div class="row category-header">
+            <div class="col s8 header-title flow-text">{{category.title}}</div>
+            <div class="col s4"><a class="center-align btn-flat waves-effect waves-light">See All</a></div>
         </div>
 
-        <div class="row">
+        <div class="row category-content">
             <div class="col s12">
-                <div class="swiper-container">
+                <div class="swiper-container" swiper>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" ng-repeat="content in category.contents">
-                            {{content.title}}
+                            <div class="row">
+                                <div class="col s4 offset-s1">
+                                    <img ng-src="http://192.168.0.43:8000{{content.thumbnail}}" />
+                                </div>
+                                <div class="col s7">
+                                    <span class="flow-text content-title">{{content.title}}</span>
+                                    <span class="flow-text content-creator">{{content.creator}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col offset-s1 s10">
+                                    <button class="btn">Download for PHP {{content.price}}</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -19,5 +32,4 @@
             </div>
         </div>
 
-    </div>
 </div>

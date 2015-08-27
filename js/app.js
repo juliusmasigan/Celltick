@@ -15,7 +15,8 @@ var celltickApp = angular.module('celltickApp', [
     'ebookService',
     'headroom',
     'switchview',
-    'ctdownload'
+    'ctdownload',
+    'ctswiper'
 ]);
 
 celltickApp.config(['$routeProvider', function($routeProvider) {
