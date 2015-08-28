@@ -52,15 +52,28 @@
             }
 
             .row {
-                background: #00A3D3;
-                background: -moz-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
-                background: -webkit-gradient(left top, right top, color-stop(0%, #00A3D3), color-stop(100%, #0065BA));
-                background: -webkit-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
-                background: -o-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
-                background: -ms-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
-                background: linear-gradient(to right, #00A3D3 0%, #0065BA 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15a0af', endColorstr='#388dbb', GradientType=1 );
                 margin-bottom:0;
+
+                &.Full.Track.Music {
+                    background: #00A3D3;
+                    background: -moz-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
+                    background: -webkit-gradient(left top, right top, color-stop(0%, #00A3D3), color-stop(100%, #0065BA));
+                    background: -webkit-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
+                    background: -o-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
+                    background: -ms-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
+                    background: linear-gradient(to right, #00A3D3 0%, #0065BA 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15a0af', endColorstr='#388dbb', GradientType=1 );
+                }
+                &.Sticker {
+                    background: #FF7400;
+                    background: -moz-linear-gradient(left, #FF7400 0%, #FF9100 100%);
+                    background: -webkit-gradient(left top, right top, color-stop(0%, #FF7400), color-stop(100%, #FF9100));
+                    background: -webkit-linear-gradient(left, #FF7400 0%, #FF9100 100%);
+                    background: -o-linear-gradient(left, #FF7400 0%, #FF9100 100%);
+                    background: -ms-linear-gradient(left, #FF7400 0%, #FF9100 100%);
+                    background: linear-gradient(to right, #FF7400 0%, #FF9100 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15a0af', endColorstr='#388dbb', GradientType=1 );
+                }
             }
 
             .row:first-child {

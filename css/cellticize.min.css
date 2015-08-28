@@ -8029,6 +8029,11 @@ nav .nav-wrapper {
   background: -ms-linear-gradient(left, #15a0af 0%, #388dbb 100%);
   background: linear-gradient(to right, #15a0af 0%, #388dbb 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15a0af', endColorstr='#388dbb', GradientType=1 ); }
+nav .nav-wrapper .side-nav {
+  background: #00A3D3; }
+nav .nav-wrapper .side-nav li > a {
+  color: #FFFFFF;
+  font-size: 1.5rem; }
 
 .z-depth-05, .card {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12); }
@@ -8145,6 +8150,8 @@ nav .nav-wrapper {
 .category .swiper-container-horizontal .swiper-wrapper .swiper-slide-active {
   z-index: 2; }
 .category .swiper-container-horizontal .swiper-wrapper .row {
+  margin-bottom: 0; }
+.category .swiper-container-horizontal .swiper-wrapper .row.Full.Track.Music {
   background: #00A3D3;
   background: -moz-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, #00A3D3), color-stop(100%, #0065BA));
@@ -8152,8 +8159,16 @@ nav .nav-wrapper {
   background: -o-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
   background: -ms-linear-gradient(left, #00A3D3 0%, #0065BA 100%);
   background: linear-gradient(to right, #00A3D3 0%, #0065BA 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15a0af', endColorstr='#388dbb', GradientType=1 );
-  margin-bottom: 0; }
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15a0af', endColorstr='#388dbb', GradientType=1 ); }
+.category .swiper-container-horizontal .swiper-wrapper .row.Sticker {
+  background: #FF7400;
+  background: -moz-linear-gradient(left, #FF7400 0%, #FF9100 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #FF7400), color-stop(100%, #FF9100));
+  background: -webkit-linear-gradient(left, #FF7400 0%, #FF9100 100%);
+  background: -o-linear-gradient(left, #FF7400 0%, #FF9100 100%);
+  background: -ms-linear-gradient(left, #FF7400 0%, #FF9100 100%);
+  background: linear-gradient(to right, #FF7400 0%, #FF9100 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15a0af', endColorstr='#388dbb', GradientType=1 ); }
 .category .swiper-container-horizontal .swiper-wrapper .row:first-child {
   margin-top: 5rem; }
 .category .swiper-container-horizontal .swiper-wrapper .row:first-child img {

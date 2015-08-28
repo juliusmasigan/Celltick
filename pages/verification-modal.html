@@ -1,4 +1,4 @@
-<div id="mobile-modal" class="modal">
+<div id="mobile-modal" class="modal" ng-controller="verify">
     <div class="modal-content">
         <div class="row">
             <div class="col s12"><h5>Please enter your mobile number</h5></div>
@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div id="verif-modal" class="modal">
+<div id="verif-modal" class="modal" ng-controller="verify">
     <div class="modal-content">
         <div class="row">
             <div class="col s12"><h5>Please enter the verification code</h5></div>
@@ -27,5 +27,3 @@
         <button class="btn" ng-click="submit_verification($event)">Submit</button>
     </div>
 </div>
-
-<!--ct-download></ct-download-->
