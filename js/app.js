@@ -9,7 +9,6 @@ var celltickApp = angular.module('celltickApp', [
     'ebookController',
     'groupsetService',
     'buyService',
-    'ftmService',
     'truetoneService',
     'stickerService',
     'gameService',
@@ -20,7 +19,8 @@ var celltickApp = angular.module('celltickApp', [
     'ctswiper'
 ]);
 
-celltickApp.config(['$routeProvider', function($routeProvider) {
+celltickApp.config(['$routeProvider', '$httpProvider', '$resourceProvider', 
+function($routeProvider, $httpProvider, $resourceProvider) {
     $routeProvider.when('/', {
         templateUrl : 'pages/home.html',
         controller  : 'homeCardsController'
@@ -58,14 +58,19 @@ celltickApp.config(['$routeProvider', function($routeProvider) {
         templateUrl : 'pages/verification-modal.html',
         controller  : 'verify'
     });
+
+    //Uses session credential in cookie.
+    $httpProvider.defaults.withCredentials = true;
+
+    //Prevents stripping the slashes in the request url.
+    $resourceProvider.defaults.stripTrailingSlashes = false;
+
+}]).run(['$rootScope', function($rootScope) {
+    $rootScope.apiBaseUrl = "http://192.168.0.43:8000";
+    $rootScope.verificationTpl = "pages/verification-modal.html";
+    $rootScope.descriptionTpl = "pages/description-modal.html";
 }]);
 
-celltickApp.config(function($httpProvider) {
-    $httpProvider.defaults.withCredentials = true;
-});
-
-
-celltickApp.apiBaseUrl = "http://192.168.0.43:8000"
 
 $(function() {
     $('nav .button-collapse').sideNav();
