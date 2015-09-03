@@ -1,10 +1,12 @@
+<div ng-include="descriptionTpl"></div>
+
 <div class="section">
     <h5>{{header}}</h5>
 </div>
 
 <div ng-repeat="pageItem in pageItems">
     <div class="row">
-        <div class="col s6 m4 content-list" ng-repeat="content in pageItem.contents">
+        <div class="col s6 m4 content-list" ng-repeat="content in pageItem.contents" ng-click="view($event, content)">
             <div class="card-panel">
                 <div class="section">
                     <div class="row">

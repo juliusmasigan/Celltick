@@ -14,3 +14,15 @@ verificationService.factory('Verify', ['$resource', '$rootScope', function($reso
         }
     });
 }]);
+
+verificationService.service('Authorize', ['$rootScope', function($rootScope) {
+    var $scope = {};
+    return {
+        setScope:function(scope) {
+            $scope = scope;
+        },
+        buy:function() {
+            $scope.buy($scope.content);
+        }
+    };
+}]);

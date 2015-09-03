@@ -1,6 +1,6 @@
-var ftmController = angular.module('ftmController', ['groupsetService']);
+var ftmController = angular.module('ftmController', ['groupsetService', 'contentService']);
 
-ftmController.controller('ftmListController', ['$scope', '$location', 'Groupset', function($scope, $location, Groupset) {
+ftmController.controller('ftmListController', ['$scope', '$location', 'Groupset', 'Content', function($scope, $location, Groupset, Content) {
     $scope.theme = 'blue-gradient';
     $scope.header = "Full Track Music";
     var ftms = Groupset.query({name:"ftm"}).$promise.then(
@@ -10,9 +10,16 @@ ftmController.controller('ftmListController', ['$scope', '$location', 'Groupset'
         }
     );
 
-    $scope.view = function(clickEvent, item) {
-       var contentId = item.id;
-       $location.path("/ftm/"+contentId);
+    $scope.view = function(clickEvent, content) {
+        Content.get({id:id}).$promise.then(
+            function(result) {
+                
+            },
+            function(error) {
+            }
+        );
+        $scope.title = content.title;
+        $('#description-modal').openModal();
     };
 }]);
 

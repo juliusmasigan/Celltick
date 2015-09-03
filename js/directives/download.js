@@ -1,12 +1,13 @@
-var ctdownload = angular.module('ctdownload', ['buyService']);
+var ctdownload = angular.module('ctdownload', ['buyService', 'verificationService']);
 
-ctdownload.directive('ctDownload', ['$rootScope', '$window', 'Buy', function($rootScope, $window, Buy) {
+ctdownload.directive('ctDownload', ['$rootScope', '$window', 'Buy', 'Authorize', function($rootScope, $window, Buy, Authorize) {
     return {
         restrict:'E',
         template:"<button class='btn center-align' ng-click=$emit('buy')>Download for PHP {{price}}</button>",
         link:function($scope, elem, attrs) {
             $scope.price = $scope.content.price;
             $scope.buy = function(content) {
+                console.log(content);
                 cid = content.id.replace(/\-/g, "");
                 Buy.get({content_id:cid}).$promise.then(
                     function(result) {
@@ -19,12 +20,13 @@ ctdownload.directive('ctDownload', ['$rootScope', '$window', 'Buy', function($ro
                     }, function(error) {
                         if(error.status == 401) {
                             $('#mobile-modal').openModal();
+                            Authorize.setScope($scope);
                         }
                     }
                 );
             };
 
-            $scope.$on('buy', function() {
+            $scope.$on('buy', function(event) {
                 $scope.$eval($scope.buy($scope.content));
             });
         }

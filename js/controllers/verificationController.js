@@ -1,6 +1,6 @@
 var verificationController = angular.module('verificationController', ['verificationService']);
 
-verificationController.controller('verify', ['$scope', 'Verify', function($scope, Verify) {
+verificationController.controller('verify', ['$scope', 'Verify', 'Authorize', function($scope, Verify, Authorize) {
     //$('#mobile-modal').openModal();
     $scope.msisdn;
     $scope.verif_code;
@@ -36,6 +36,7 @@ verificationController.controller('verify', ['$scope', 'Verify', function($scope
         Verify.post({}, {'verification_code':$scope.verif_code}).$promise.then(
             function(result) {
                 $('#verif-modal').closeModal();
+                Authorize.buy();
             }, function(error) {
                 //Handle error here.
                 var errorMsg;
