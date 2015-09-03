@@ -1,9 +1,14 @@
-var stickerController = angular.module('stickerController', []);
+var stickerController = angular.module('stickerController', ['groupsetService']);
 
-stickerController.controller('stickerListController', ['$scope', '$location', 'Sticker', function($scope, $location, Sticker) {
-    var stickers = Sticker.query({data:"stickerList"});
-
-    $scope.itemList = stickers;
+stickerController.controller('stickerListController', ['$scope', '$location', 'Groupset', function($scope, $location, Groupset) {
+    $scope.theme = 'orange-gradient';
+    $scope.header = "Sticker";
+    var stickers = Groupset.query({name:"sticker"}).$promise.then(
+        function(result) {
+            $scope.pageItems = result;
+        }, function(error) {
+        }
+    );
 
     $scope.view = function(clickEvent, item) {
        var contentId = item.id;
