@@ -1,7 +1,7 @@
 var verificationService = angular.module('verificationService', ['ngResource']);
 
-verificationService.factory('Verify', ['$resource', function($resource) {
-    return $resource(celltickApp.apiBaseUrl+'/verify/', {}, {
+verificationService.factory('Verify', ['$resource', '$rootScope', function($resource, $rootScope) {
+    return $resource($rootScope.apiBaseUrl+'/verify/', {}, {
         post: {
             method:'POST', 
             interceptor: {
@@ -12,5 +12,5 @@ verificationService.factory('Verify', ['$resource', function($resource) {
                 }
             }
         }
-    }, {stripTrailingSlashes:false});
+    });
 }]);
