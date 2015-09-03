@@ -1,66 +1,52 @@
-.z-depth-05{
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-}
+.col.content-list {
+    padding:0 0.35rem;
 
-.card {
-    @extend .card;
-    @extend .z-depth-05;
-    margin:0.35rem 0;
+    .card-panel {
+        @extend .card-panel;
+        color:#FFFFFF;
+        padding:0px;
+        
+        >.section:nth-child(1) {
 
-    .card-content {
-        padding: 5px;
-        font-size: .65rem;
+            .col {
+                padding:0 1.5rem;
+            }
 
-        .content-title {
-            font-size: .8rem;
-            white-space: nowrap;
+            img {
+                width:100%;
+                border:solid 1px color('grey', 'darken-1');
+            }
+        }
+
+        >.section:nth-child(2) {
+            margin-top: -90px;
+            padding-top: 55px;
+
+            >.row {
+                margin-bottom:0px;
+            }
+
+            .content-title, .content-artist {
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+                font-weight:300;
+            }
+
+            .content-title {
+                font-size:1.5rem;
+            }
+
+            button {
+                @include border-radius(10px 10px);
+                @extend .z-depth-1;
+                font-size: 0.75rem;
+                line-height: 1rem;
+                padding: 0 15px;
+                margin-top: 10px;
+                background-color:#66BB6A;
+                width:100%;
+            }
         }
     }
-
-    &.extra-small {
-        position: relative;
-
-        .card-image {
-          overflow: hidden;
-        }
-        .card-content {
-          overflow: hidden;
-        }
-        .card-action {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-        }
-    }
-
-    &.extra-small {
-        .card-image {
-          width: 100%;
-        }
-    }
-
-    .content-title {
-        font-weight:600;
-    }
-}
-
-.card-panel {
-    @extend .card-panel;
-    padding:5px;
-    margin:0.25rem 0;
-    font-size:0.8rem;
-
-    .row {
-        margin-bottom:0;
-    }
-}
-
-.fade-text:after {
-    content: "";
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white 80%);
-    right: 0px;
-    width: 30%;
-    height: 20px;
-    position: absolute;
 }
