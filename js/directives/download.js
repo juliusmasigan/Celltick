@@ -1,6 +1,6 @@
 var ctdownload = angular.module('ctdownload', ['buyService']);
 
-ctdownload.directive('ctDownload', ['$window', 'Buy', function($window, Buy) {
+ctdownload.directive('ctDownload', ['$rootScope', '$window', 'Buy', function($rootScope, $window, Buy) {
     return {
         restrict:'E',
         template:"<button class='btn center-align' ng-click=$emit('buy')>Download for PHP {{price}}</button>",
@@ -15,7 +15,7 @@ ctdownload.directive('ctDownload', ['$window', 'Buy', function($window, Buy) {
                         form.setAttribute('method', "GET");
                         form.setAttribute('action', celltickApp.apiBaseUrl+"/download/"+url);
                         form.submit();*/
-                        $window.location.href = celltickApp.apiBaseUrl+"/download/"+url;
+                        $window.location.href = $rootScope.apiBaseUrl+"/download/"+url;
                     }, function(error) {
                         if(error.status == 401) {
                             $('#mobile-modal').openModal();
