@@ -1,9 +1,6 @@
-var homeController = angular.module('homeController', ['groupsetService', 'buyService']);
+var homeController = angular.module('homeController', ['groupsetService']);
 
-homeController.controller('homeCardsController', ['$scope', '$window', 'Groupset', 'Buy', function($scope, $window, Groupset, Buy) {
-    $scope.verification = "pages/verification-modal.html";
-    $scope.apiBaseUrl = celltickApp.apiBaseUrl;
-
+homeController.controller('homeCardsController', ['$scope', 'Groupset', function($scope, Groupset) {
     Groupset.query({name:'home'}).$promise.then(
         function(result) {
             $scope.categories = result;
