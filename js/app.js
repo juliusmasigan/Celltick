@@ -1,7 +1,6 @@
 var celltickApp = angular.module('celltickApp', [
     'ngRoute', 
     'homeController',
-    'contentController',
     'ftmController',
     'truetoneController',
     'stickerController',
