@@ -2,7 +2,7 @@
 <html ng-app="celltickApp">
     <head>
         <!--Import materialize.css-->
-        <!--link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="css/cellticize.min.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="css/swiper.min.css"  media="screen,projection"/>
 
@@ -33,6 +33,7 @@
         </div>
 
         <div class="container">
+            <div ng-include="verificationTpl"></div>
             <div ng-view></div>
         </div>
 

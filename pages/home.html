@@ -1,9 +1,8 @@
-<div ng-include="verification"></div>
 <div class="section category" ng-repeat="category in categories">
 
         <div class="row category-header">
             <div class="col s8 header-title flow-text">{{category.title}}</div>
-            <div class="col s4"><a class="center-align btn-flat waves-effect waves-light">See All</a></div>
+            <div class="col s4"><a href="#{{category.groupset_link}}" class="center-align btn-flat waves-effect waves-light">See All</a></div>
         </div>
 
         <div class="row category-content">
