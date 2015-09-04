@@ -11,14 +11,16 @@ ftmController.controller('ftmListController', ['$scope', '$location', 'Groupset'
     );
 
     $scope.view = function(clickEvent, content) {
+        $scope.content = content;
+
+        var id = content.id.replace(/\-/g, "");
         Content.get({id:id}).$promise.then(
             function(result) {
-                
+                $scope.content.description = result.description;
             },
             function(error) {
             }
         );
-        $scope.title = content.title;
         $('#description-modal').openModal();
     };
 }]);
