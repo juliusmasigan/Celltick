@@ -3,11 +3,9 @@ var ctdownload = angular.module('ctdownload', ['buyService', 'verificationServic
 ctdownload.directive('ctDownload', ['$rootScope', '$window', 'Buy', 'Authorize', function($rootScope, $window, Buy, Authorize) {
     return {
         restrict:'E',
-        template:"<button class='btn center-align' ng-click=$emit('buy')>Download for PHP {{price}}</button>",
+        template:"<button class='btn center-align' ng-click=$emit('buy')>Download for PHP {{content.price}}</button>",
         link:function($scope, elem, attrs) {
-            $scope.price = $scope.content.price;
             $scope.buy = function(content) {
-                console.log(content);
                 cid = content.id.replace(/\-/g, "");
                 Buy.get({content_id:cid}).$promise.then(
                     function(result) {
