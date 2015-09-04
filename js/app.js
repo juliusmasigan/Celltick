@@ -16,7 +16,9 @@ var celltickApp = angular.module('celltickApp', [
     'headroom',
     'switchview',
     'ctdownload',
-    'ctswiper'
+    'ctswiper',
+    'materializeToast',
+    'labelError'
 ]);
 
 celltickApp.config(['$routeProvider', '$httpProvider', '$resourceProvider', 
@@ -65,7 +67,7 @@ function($routeProvider, $httpProvider, $resourceProvider) {
     //Prevents stripping the slashes in the request url.
     $resourceProvider.defaults.stripTrailingSlashes = false;
 
-}]).run(['$rootScope', function($rootScope) {
+}]).run(['$rootScope', 'Toast', function($rootScope, Toast) {
     $rootScope.apiBaseUrl = "http://192.168.0.43:8000";
     $rootScope.verificationTpl = "pages/verification-modal.html";
     $rootScope.descriptionTpl = "pages/description-modal.html";
