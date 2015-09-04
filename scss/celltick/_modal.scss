@@ -4,6 +4,22 @@
     }
 }
 
+.mobile-modal, .verif-modal {
+    .modal-content {
+        label {
+            width:100%;
+        }
+    }
+
+    .modal-footer {
+        button.btn {
+            @include border-radius(20px);
+            background: #7BC570;
+            font-weight: 400;
+        }
+    }
+}
+
 .description-modal {
     .modal-content {
         padding:15px;
@@ -28,8 +44,8 @@
 
     .modal-footer {
         button.btn {
-            background:#66BB6A;
-            border-radius:15px;
+            @include border-radius(20px);
+            background:#7BC570;
             padding:0 10px;
         }
     }
